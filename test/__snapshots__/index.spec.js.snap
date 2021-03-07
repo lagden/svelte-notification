@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Notifications should match snapshot 1`] = `
+<body>
+  <div>
+    
+  </div>
+  <div
+    class="_tadashi_svelte_notifications svelte-1cix5mn"
+    style=""
+  >
+    
+    <div
+      aria-live="polite"
+      class="_tadashi_svelte_notification svelte-1aia55s"
+      role="status"
+    >
+      <div
+        class="_tadashi_svelte_notification__content svelte-1aia55s"
+      >
+        test
+        
+      </div>
+       
+      <button
+        aria-label="delete notification"
+        class="_tadashi_svelte_notification__btn svelte-1aia55s"
+      >
+        ×
+      </button>
+    </div>
+  </div>
+</body>
+`;
