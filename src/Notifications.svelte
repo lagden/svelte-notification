@@ -26,6 +26,7 @@
 :root {
 	--tadashi_svelte_notifications_width: 270px;
 	--tadashi_svelte_notifications_margin: 0.9em;
+	--tadashi_svelte_notifications_zindex: 1001;
 }
 
 ._tadashi_svelte_notifications {
@@ -34,5 +35,6 @@
 	margin: var(--tadashi_svelte_notifications_margin);
 	top: 0;
 	right: 0;
+	z-index: var(--tadashi_svelte_notifications_zindex);
 }
 </style>
