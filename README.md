@@ -21,7 +21,7 @@ $ npm i -S @tadashi/svelte-notification
 
 ## API
 
-### acts.add(notification)
+### acts.add(notification: Object): void
 
 #### notification
 
