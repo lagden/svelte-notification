@@ -36,7 +36,7 @@ lifetime    | Number       | no          | 0                     | autodestroy i
 
 You can see an example here: https://svelte.dev/repl/d11f78c338f543c2b9c4ec529009dd4e?version=3.35.0
 
-```html
+```svelte
 <script>
   import {Notifications, acts} from '@tadashi/svelte-notification'
 
