@@ -1,21 +1,17 @@
+import hexID from '@tadashi/hex-id'
 import store from './store.js'
-
-let cc = 0
-function hexId() {
-	return Number(cc++).toString(26)
-}
 
 const base = {
 	mode: 'normal',
 	message: '',
-	lifetime: false
+	lifetime: 0
 }
 
 export function add(notification) {
 	notification = {
 		...base,
 		...notification,
-		id: `tadashi_svelte_notification_${hexId()}`
+		id: `tadashi_svelte_notification_${hexID()}`
 	}
 	store.update(n => {
 		n.add(notification)
@@ -28,4 +24,8 @@ export function remove(notification) {
 		n.delete(notification)
 		return n
 	})
+}
+
+export function getStore() {
+	return store
 }

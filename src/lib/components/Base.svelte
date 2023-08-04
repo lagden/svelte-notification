@@ -1,6 +1,7 @@
 <script>
 	import {fade, slide} from 'svelte/transition'
 
+	// Define o modo da notificação aqui (success, warning, danger, info)
 	export let mode
 </script>
 

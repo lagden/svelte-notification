@@ -16,6 +16,6 @@ test('notifications', async ({page}) => {
 
 	await setTimeout(1000)
 	await page.screenshot({
-		path: './test-results/screenshot.png',
+		path: './tests/e2e/__screenshots__/index.spec.js.png',
 	})
 })

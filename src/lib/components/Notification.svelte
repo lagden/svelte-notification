@@ -9,19 +9,18 @@
 	const {
 		mode = 'normal',
 		message = '',
-		lifetime = false
+		lifetime = 0,
 	} = notification
 
 	let _timeout
 
-	if (lifetime) {
-		let _time = Number.isNaN(lifetime) ? 3000 : Number(lifetime) * 1000
+	if (lifetime > 0) {
 		_timeout = setTimeout(() => {
 			remove(notification)
-		}, _time)
+		}, lifetime * 1000)
 	}
 
-	function onRemoveNotification(notification) {
+	const onRemoveNotification = () => {
 		remove(notification)
 	}
 
@@ -32,4 +31,4 @@
 	})
 </script>
 
-<Base {mode} on:click={onRemoveNotification(notification)}>{@html message}</Base>
+<Base {mode} on:click={onRemoveNotification}>{@html message}</Base>

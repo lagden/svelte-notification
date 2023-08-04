@@ -1,23 +1,9 @@
-import {writable, get} from 'svelte/store'
-
-function base_store(o = new Set([])) {
-	const {set, update, subscribe} = writable(o)
-
-	return {
-		getData(store) {
-			return globalThis.structuredClone(get(store))
-		},
-		set(data) {
-			set(globalThis.structuredClone(data))
-		},
-		subscribe,
-		update,
-	}
-}
+import { writable } from 'svelte/store'
 
 const KEY = Symbol.for('store.notifications')
 const singleton = {}
-singleton[KEY] = base_store()
+
+singleton[KEY] = writable(new Set([]))
 
 Object.freeze(singleton)
 
