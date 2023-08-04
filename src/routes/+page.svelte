@@ -3,11 +3,11 @@
 
 	let triggers = [
 		{ mode: 'normal', message: 'Nothing to say...', lifetime: 2 },
-		{ mode: 'success', message: 'Nice!' },
-		{ mode: 'info', message: 'Leve a japona' },
-		{ mode: 'warn', message: 'Já chegou o disco voador! 🛸' },
-		{ mode: 'danger', message: 'Alta tensão ☠' },
-	];
+		{ mode: 'success', message: '✓ Nice!' },
+		{ mode: 'info', message: 'ℹ Leve a japona' },
+		{ mode: 'warn', message: '⚠ Já chegou o disco voador!' },
+		{ mode: 'danger', message: '☠ Alta tensão' },
+	]
 </script>
 
 {#each triggers as trigger}

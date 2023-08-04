@@ -33,7 +33,7 @@
 		<slot />
 	</div>
 	<button
-		aria-label="delete notification"
+		aria-label="Remove notification"
 		class="_tadashi_svelte_notification__btn"
 		on:click
 	></button>
