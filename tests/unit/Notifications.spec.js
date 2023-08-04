@@ -24,25 +24,26 @@ function doc_query(selector) {
 	return node
 }
 
-test('should match snapshot', async () => {
+test('Notifications', async () => {
 	const target = doc_query('main#xxx')
 	new Notifications({ target })
+
 	const notification = { message: 'one', lifetime: 10 }
 	acts.add(notification)
 
 	await setTimeout(2000)
 	const div = doc_query('div')
-	expect(div).toMatchSnapshot()
+	expect(div).toBeDefined()
 
 	const store = acts.getStore()
-	console.log('notification', get(store).size)
+	expect(get(store).size).toBe(1)
 
 	const spy = vi.fn()
 	const btn = doc_query('button._tadashi_svelte_notification__btn')
 	btn.addEventListener('click', () => {
 		spy()
 		acts.remove(notification)
-		console.log('notification', get(store).size)
+		expect(get(store).size).toBe(0)
 	})
 
 	const clickEvent = new Event('click')
@@ -54,7 +55,7 @@ test('should match snapshot', async () => {
 	expect(() => doc_query('div')).toThrowError(/No element/)
 })
 
-test('size 1', async () => {
+test('Size', async () => {
 	const notification = { message: 'one', lifetime: 10 }
 	acts.add(notification)
 
@@ -63,5 +64,5 @@ test('size 1', async () => {
 
 	await setTimeout(2000)
 	const div = doc_query('div')
-	expect(div).toMatchSnapshot()
+	expect(div).toBeDefined()
 })

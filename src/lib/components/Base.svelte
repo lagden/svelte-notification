@@ -3,11 +3,24 @@
 
 	// Define o modo da notificação aqui (success, warning, danger, info)
 	export let mode
+	export let id
+
+	const modes = {
+		ok: 'Success',
+		success: 'Success',
+		warning: 'Warning',
+		warn: 'Warning',
+		error: 'Error',
+		danger: 'Error',
+		info: 'Information',
+	}
 </script>
 
 <div
-	role="status"
-	aria-live="polite"
+	role="alert"
+	aria-atomic="true"
+	aria-label={modes?.[mode] ?? 'Normal'}
+	aria-describedby={id}
 	class="_tadashi_svelte_notification"
 	class:_tadashi_svelte_notification__success={mode === 'success' || mode === 'ok'}
 	class:_tadashi_svelte_notification__warning={mode === 'warning' || mode === 'warn'}
@@ -16,7 +29,7 @@
 	in:fade
 	out:slide
 >
-	<div class="_tadashi_svelte_notification__content">
+	<div class="_tadashi_svelte_notification__content" id={id}>
 		<slot />
 	</div>
 	<button

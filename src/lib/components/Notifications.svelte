@@ -5,7 +5,7 @@
 	import Notification from './Notification.svelte'
 
 	function init(node) {
-		document.body.insertAdjacentElement('beforeend', node)
+		globalThis.document.body.insertAdjacentElement('beforeend', node)
 	}
 </script>
 

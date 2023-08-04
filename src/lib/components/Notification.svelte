@@ -10,6 +10,7 @@
 		mode = 'normal',
 		message = '',
 		lifetime = 0,
+		id,
 	} = notification
 
 	let _timeout
@@ -31,4 +32,4 @@
 	})
 </script>
 
-<Base {mode} on:click={onRemoveNotification}>{@html message}</Base>
+<Base {mode} {id} on:click={onRemoveNotification}>{@html message}</Base>
