@@ -1,17 +1,15 @@
-import { sveltekit } from '@sveltejs/kit/vite'
-import { defineConfig } from 'vitest/config'
+import {sveltekit} from '@sveltejs/kit/vite'
+import {defineConfig} from 'vitest/config'
 
 export default defineConfig({
-	plugins: [
-		sveltekit(),
-	],
+	plugins: [sveltekit()],
 	test: {
 		include: ['tests/unit/**/*.{test,spec}.{js,ts}'],
 		environment: 'jsdom',
 		threads: false,
 		globals: true,
 		coverage: {
-			reporter: ['text', 'text-summary', 'lcov', 'json-summary'],
+			reporter: ['text', 'text-summary', 'lcovonly', 'cobertura'],
 		},
 	},
 })

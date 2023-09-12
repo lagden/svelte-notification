@@ -1,0 +1,18 @@
+stages:
+  - test
+
+test:
+  image: node:18-slim
+  stage: test
+  before_script:
+    - npm i -g pnpm
+    - pnpm dlx playwright install --with-deps
+  script:
+    - pnpm install
+    - npm test
+  coverage: '/Statements\s*:\s*([^%]+)/'
+  artifacts:
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: coverage/cobertura-coverage.xml

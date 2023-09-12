@@ -6,6 +6,7 @@ const config = {
 	},
 	testDir: 'tests/e2e',
 	testMatch: /(.+\.)(test|spec)\.[jt]s/,
+	outputDir: 'tests/e2e/results',
 }
 
 export default config

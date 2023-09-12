@@ -4,14 +4,14 @@ import store from './store.js'
 const base = {
 	mode: 'normal',
 	message: '',
-	lifetime: 0
+	lifetime: 0,
 }
 
 export function add(notification) {
 	notification = {
 		...base,
 		...notification,
-		id: `tadashi_svelte_notification_${hexID()}`
+		id: `tadashi_svelte_notification_${hexID()}`,
 	}
 	store.update(n => {
 		n.add(notification)

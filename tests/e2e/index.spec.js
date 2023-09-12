@@ -1,8 +1,5 @@
 import {setTimeout} from 'timers/promises'
-import {
-	expect,
-	test,
-} from '@playwright/test'
+import {expect, test} from '@playwright/test'
 
 test('notifications', async ({page}) => {
 	await page.goto('/')
@@ -16,6 +13,6 @@ test('notifications', async ({page}) => {
 
 	await setTimeout(1000)
 	await page.screenshot({
-		path: './tests/e2e/__screenshots__/index.spec.js.png',
+		path: './tests/e2e/results/index.spec.js.png',
 	})
 })

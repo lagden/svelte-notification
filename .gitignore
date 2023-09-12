@@ -1,7 +1,6 @@
 .DS_Store
 node_modules
 /build
-/coverage
 /dist
 /.svelte-kit
 /package
@@ -10,3 +9,8 @@ node_modules
 !.env.example
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+coverage/**
+!coverage/lcov.info
+
+# ver quem gera esse cara
+test-results
