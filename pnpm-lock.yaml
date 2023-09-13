@@ -7,7 +7,7 @@ settings:
 dependencies:
   '@tadashi/hex-id':
     specifier: '*'
-    version: 3.0.0
+    version: 3.0.2
 
 devDependencies:
   '@playwright/test':
@@ -511,8 +511,8 @@ packages:
       - supports-color
     dev: true
 
-  /@tadashi/hex-id@3.0.0:
-    resolution: {integrity: sha512-6hlxabKH3pYHA44ieYpgpjYf1CzH51M/57wcx62Or+pMia9tl+RAZd0VwP7228+2mHUH/M87VHuL6TsVYFYpMQ==}
+  /@tadashi/hex-id@3.0.2:
+    resolution: {integrity: sha512-1A4t/PNJEZxUOAz7aqnowq5Lw5qMfa3ZokMrBUFY1jL1mzbNJmbVb0XGBfRgPWqmgrfecWUmKvzL8Gyim9UBtA==}
     engines: {node: '>=18'}
     dev: false
 
