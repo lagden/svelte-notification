@@ -1,8 +1,11 @@
 .*
 bin
+build
 coverage
 dist
 node_modules
+package
+vite.config.js.timestamp-*
 
 *.json
 *.yaml

@@ -44,7 +44,7 @@ test('Notifications', async () => {
 	await setTimeout(2000)
 
 	expect(spy, 'clicado').toHaveBeenCalledTimes(1)
-	expect(() => doc_query('div')).toThrowError(/No element/)
+	expect(() => doc_query('div._tadashi_svelte_notification__content')).toThrowError(/No element/)
 })
 
 test('Size', async () => {
@@ -55,6 +55,6 @@ test('Size', async () => {
 	new Notifications({target})
 
 	await setTimeout(2000)
-	const div = doc_query('div')
+	const div = doc_query('div._tadashi_svelte_notification__content')
 	expect(div).toBeDefined()
 })

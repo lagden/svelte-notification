@@ -39,7 +39,8 @@
     "lint": "prettier --check . && eslint .",
     "format": "prettier --write .",
     "test:integration": "playwright test",
-    "test:unit": "vitest --run --coverage"
+    "test:unit": "vitest --run --coverage",
+    "test:ui": "vitest --ui --coverage"
   },
   "peerDependencies": {
     "@tadashi/hex-id": "*",
@@ -51,6 +52,7 @@
     "@sveltejs/kit": "1.25.0",
     "@sveltejs/package": "2.2.2",
     "@vitest/coverage-v8": "0.34.4",
+    "@vitest/ui": "0.34.4",
     "eslint-config-prettier": "9.0.0",
     "eslint-plugin-svelte": "2.33.1",
     "jsdom": "22.1.0",

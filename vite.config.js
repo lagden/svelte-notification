@@ -1,9 +1,8 @@
 import {sveltekit} from '@sveltejs/kit/vite'
 import {defineConfig} from 'vitest/config'
 
-// console.log('isProduction', process.env)
-
-export default defineConfig({
+const preview = process?.env?.PREVIEW ?? false
+const config = {
 	plugins: [sveltekit()],
 	test: {
 		include: ['tests/unit/**/*.{test,spec}.{js,ts}'],
@@ -19,4 +18,10 @@ export default defineConfig({
 			external: ['@tadashi/hex-id'],
 		},
 	},
-})
+}
+
+if (preview) {
+	Reflect.deleteProperty(config, 'build')
+}
+
+export default defineConfig(config)
