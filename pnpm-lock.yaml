@@ -4,22 +4,24 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+dependencies:
+  '@tadashi/hex-id':
+    specifier: '*'
+    version: 3.0.0
+
 devDependencies:
   '@playwright/test':
     specifier: 1.37.1
     version: 1.37.1
   '@sveltejs/adapter-auto':
     specifier: 2.1.0
-    version: 2.1.0(@sveltejs/kit@1.24.1)
+    version: 2.1.0(@sveltejs/kit@1.25.0)
   '@sveltejs/kit':
-    specifier: 1.24.1
-    version: 1.24.1(svelte@4.2.0)(vite@4.4.9)
+    specifier: 1.25.0
+    version: 1.25.0(svelte@4.2.0)(vite@4.4.9)
   '@sveltejs/package':
     specifier: 2.2.2
     version: 2.2.2(svelte@4.2.0)(typescript@5.2.2)
-  '@tadashi/hex-id':
-    specifier: 2.0.0
-    version: 2.0.0
   '@vitest/coverage-v8':
     specifier: 0.34.4
     version: 0.34.4(vitest@0.34.4)
@@ -416,17 +418,17 @@ packages:
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
     dev: true
 
-  /@sveltejs/adapter-auto@2.1.0(@sveltejs/kit@1.24.1):
+  /@sveltejs/adapter-auto@2.1.0(@sveltejs/kit@1.25.0):
     resolution: {integrity: sha512-o2pZCfATFtA/Gw/BB0Xm7k4EYaekXxaPGER3xGSY3FvzFJGTlJlZjBseaXwYSM94lZ0HniOjTokN3cWaLX6fow==}
     peerDependencies:
       '@sveltejs/kit': ^1.0.0
     dependencies:
-      '@sveltejs/kit': 1.24.1(svelte@4.2.0)(vite@4.4.9)
+      '@sveltejs/kit': 1.25.0(svelte@4.2.0)(vite@4.4.9)
       import-meta-resolve: 3.0.0
     dev: true
 
-  /@sveltejs/kit@1.24.1(svelte@4.2.0)(vite@4.4.9):
-    resolution: {integrity: sha512-u2FO0q62Se9UZ0g9kXaWYi+54vTK70BKaPScOcx6jLMRou4CUZgDTNKnRhsbJgPMgaLkOH0j3o/fKlZ6jBfgSg==}
+  /@sveltejs/kit@1.25.0(svelte@4.2.0)(vite@4.4.9):
+    resolution: {integrity: sha512-+VqMWJJYtcLoF8hYkdqY2qs/MPaawrMwA/gNBJW2o2UrcuYdNiy0ZZnjQQuPD33df/VcAulnoeyzF5ZtaajFEw==}
     engines: {node: ^16.14 || >=18}
     hasBin: true
     requiresBuild: true
@@ -506,10 +508,10 @@ packages:
       - supports-color
     dev: true
 
-  /@tadashi/hex-id@2.0.0:
-    resolution: {integrity: sha512-FaREVU+UQNXJvZrStmsOVfJzpcMbAWz1qvZNUJTopRQjOr1Tca2aKM0JIquYvktCiDZHZusHdIshgVR9QcL17w==}
-    engines: {node: '>=12.0.0'}
-    dev: true
+  /@tadashi/hex-id@3.0.0:
+    resolution: {integrity: sha512-6hlxabKH3pYHA44ieYpgpjYf1CzH51M/57wcx62Or+pMia9tl+RAZd0VwP7228+2mHUH/M87VHuL6TsVYFYpMQ==}
+    engines: {node: '>=18'}
+    dev: false
 
   /@tootallnate/once@2.0.0:
     resolution: {integrity: sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==}
