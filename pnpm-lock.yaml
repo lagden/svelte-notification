@@ -6,7 +6,7 @@ settings:
 
 dependencies:
   '@tadashi/hex-id':
-    specifier: '*'
+    specifier: 3.0.2
     version: 3.0.2
 
 devDependencies:

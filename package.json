@@ -1,6 +1,6 @@
 {
   "name": "@tadashi/svelte-notification",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "Svelte component",
   "author": "Thiago Lagden",
   "license": "MIT",
@@ -42,8 +42,10 @@
     "test:unit": "vitest --run --coverage",
     "test:ui": "vitest --ui --coverage"
   },
+  "dependencies": {
+    "@tadashi/hex-id": "3.0.2"
+  },
   "peerDependencies": {
-    "@tadashi/hex-id": "*",
     "svelte": ">=3.50"
   },
   "devDependencies": {
