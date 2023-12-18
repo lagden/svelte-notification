@@ -1,12 +1,20 @@
 arrowParens: avoid
-# editorconfig: true
-insertPragma: false
+bracketSameLine: false
 bracketSpacing: false
+# embeddedLanguageFormatting: auto
+insertPragma: false
+htmlWhitespaceSensitivity: css
+printWidth: 120
+proseWrap: preserve
+quoteProps: as-needed
+requirePragma: false
 semi: false
-useTabs: true
+singleAttributePerLine: false
 singleQuote: true
 trailingComma: all
-printWidth: 1000
+tabWidth: 4
+useTabs: true
+
 overrides:
   - files: '*.svelte'
     options:

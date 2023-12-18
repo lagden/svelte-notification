@@ -4,7 +4,8 @@ import {expect, test} from '@playwright/test'
 test('notifications', async ({page}) => {
 	await page.goto('/')
 
-	for (const btn of await page.locator('css=button').all()) {
+	// for (const btn of await page.locator('css=button').all()) {
+	for (const btn of await page.getByRole('button').all()) {
 		await btn.click()
 	}
 

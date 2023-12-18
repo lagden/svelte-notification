@@ -6,12 +6,7 @@
 
 	export let notification
 
-	const {
-		mode = 'normal',
-		message = '',
-		lifetime = 0,
-		id,
-	} = notification
+	const {mode = 'normal', message = '', lifetime = 0, id} = notification
 
 	let _timeout
 

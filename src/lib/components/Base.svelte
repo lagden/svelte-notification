@@ -29,14 +29,10 @@
 	in:fade
 	out:slide
 >
-	<div class="_tadashi_svelte_notification__content" id={id}>
+	<div class="_tadashi_svelte_notification__content" {id}>
 		<slot />
 	</div>
-	<button
-		aria-label="Remove notification"
-		class="_tadashi_svelte_notification__btn"
-		on:click
-	></button>
+	<button aria-label="Remove notification" class="_tadashi_svelte_notification__btn" on:click></button>
 </div>
 
 <style>
@@ -88,7 +84,7 @@
 
 	._tadashi_svelte_notification__warning > ._tadashi_svelte_notification__content,
 	._tadashi_svelte_notification__warning > ._tadashi_svelte_notification__btn {
-		background: var(--tadashi_svelte_notification__warning_background, hsl(44deg 100% 50%  / 90%));
+		background: var(--tadashi_svelte_notification__warning_background, hsl(44deg 100% 50% / 90%));
 		color: var(--tadashi_svelte_notification__warning_color, hsl(0deg 0% 0%));
 	}
 

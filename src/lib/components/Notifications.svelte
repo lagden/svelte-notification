@@ -10,12 +10,7 @@
 </script>
 
 {#if $store.size > 0}
-	<div
-		class="_tadashi_svelte_notifications"
-		use:init
-		in:fade|global
-		out:fade|global
-	>
+	<div class="_tadashi_svelte_notifications" use:init in:fade|global out:fade|global>
 		{#each [...$store] as notification (notification.id)}
 			<Notification {notification} />
 		{/each}

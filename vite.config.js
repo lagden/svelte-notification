@@ -9,13 +9,23 @@ const config = {
 		environment: 'jsdom',
 		threads: false,
 		globals: true,
+		// prettier-ignore
 		coverage: {
-			reporter: ['text', 'text-summary', 'lcovonly', 'cobertura'],
+			include: ['src/lib/**'],
+			reporter: [
+				'text',
+				'text-summary',
+				'lcovonly',
+				'cobertura',
+			],
 		},
 	},
 	build: {
 		rollupOptions: {
-			external: ['@tadashi/hex-id'],
+			// prettier-ignore
+			external: [
+				'@tadashi/hex-id',
+			],
 		},
 	},
 }
